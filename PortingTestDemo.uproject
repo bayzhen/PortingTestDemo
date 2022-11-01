@@ -7,7 +7,28 @@
 		{
 			"Name": "PortingTestDemo",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OnlineSubsystemPico",
+			"Enabled": false
+		},
+		{
+			"Name": "PICOXR",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Android"
+			]
+		},
+		{
+			"Name": "PicoPorting",
+			"Enabled": false
 		}
 	]
 }

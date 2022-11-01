@@ -7,5 +7,9 @@
 
 bool APortingTestDemoGameModeBase::CppHasInputFocus()
 {
+#ifdef PICO_PORTING
+	return UPicoPortFunctionLibrary::PicoPort_HasInputFocus();
+#else
 	return UOculusFunctionLibrary::HasInputFocus();
+#endif
 }

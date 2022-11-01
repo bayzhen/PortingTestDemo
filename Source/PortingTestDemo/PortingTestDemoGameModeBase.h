@@ -15,6 +15,6 @@ class PORTINGTESTDEMO_API APortingTestDemoGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 
-		UFUNCTION(BlueprintCallable, Category = "ForTest")
-		static bool CppHasInputFocus();
+	UFUNCTION(BlueprintCallable, Category = "ForTest")
+	static bool CppHasInputFocus();
 };
