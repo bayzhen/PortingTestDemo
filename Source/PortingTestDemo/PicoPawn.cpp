@@ -57,3 +57,8 @@ TArray<float> APicoPawn::CppGetAvailableDisplayFrequencies()
 {
 	return UOculusFunctionLibrary::GetAvailableDisplayFrequencies();
 }
+
+void APicoPawn::CppSetCPUAndGPULevels(int CPULevel, int GPULevel)
+{
+	UOculusFunctionLibrary::SetCPUAndGPULevels(CPULevel, GPULevel);
+}

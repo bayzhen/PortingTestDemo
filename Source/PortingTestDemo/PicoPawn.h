@@ -54,4 +54,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "ForTest")
 		static TArray<float> CppGetAvailableDisplayFrequencies();
+
+	UFUNCTION(BlueprintCallable, Category = "ForTest")
+		static void CppSetCPUAndGPULevels(int CPULevel, int GPULevel);
 };
