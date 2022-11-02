@@ -32,3 +32,28 @@ void APicoPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void APicoPawn::CppGetPose(FRotator& DeviceRotation, FVector& DevicePosition, FVector& NeckPosition, bool bUseOrienationForPlayerCamera, bool bUsePositionForPlayerCamera, const FVector PositionScale)
+{
+	UOculusFunctionLibrary::GetPose(DeviceRotation, DevicePosition, NeckPosition, bUseOrienationForPlayerCamera, bUsePositionForPlayerCamera, PositionScale);
+}
+
+void APicoPawn::CppGetRawSensorData(FVector& AngularAcceleration, FVector& LinearAcceleration, FVector& AngularVelocity, FVector& LinearVelocity, float& TimeInSeconds)
+{
+	UOculusFunctionLibrary::GetRawSensorData(
+		AngularAcceleration, LinearAcceleration, AngularVelocity, LinearVelocity, TimeInSeconds);
+}
+
+EFixedFoveatedRenderingLevel APicoPawn::CppGetFixedFoveatedRenderingLevel()
+{
+	return UOculusFunctionLibrary::GetFixedFoveatedRenderingLevel();
+}
+
+float APicoPawn::CppGetCurrentDisplayFrequency()
+{
+	return UOculusFunctionLibrary::GetCurrentDisplayFrequency();
+}
+
+TArray<float> APicoPawn::CppGetAvailableDisplayFrequencies()
+{
+	return UOculusFunctionLibrary::GetAvailableDisplayFrequencies();
+}
