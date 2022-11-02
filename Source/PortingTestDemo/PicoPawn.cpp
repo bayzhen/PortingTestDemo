@@ -62,3 +62,13 @@ void APicoPawn::CppSetCPUAndGPULevels(int CPULevel, int GPULevel)
 {
 	UOculusFunctionLibrary::SetCPUAndGPULevels(CPULevel, GPULevel);
 }
+
+void APicoPawn::CppSetDisplayFrequency(float RequestedFrequency)
+{
+	UOculusFunctionLibrary::SetDisplayFrequency(RequestedFrequency);
+}
+
+void APicoPawn::CppSetFixedFoveatedRenderingLevel(EFixedFoveatedRenderingLevel level, bool isDynamic)
+{
+	UOculusFunctionLibrary::SetFixedFoveatedRenderingLevel(level, isDynamic);
+}

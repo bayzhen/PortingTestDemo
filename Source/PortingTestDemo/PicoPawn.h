@@ -57,4 +57,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "ForTest")
 		static void CppSetCPUAndGPULevels(int CPULevel, int GPULevel);
+
+	UFUNCTION(BlueprintCallable, Category = "ForTest")
+		static void CppSetDisplayFrequency(float RequestedFrequency);
+
+	UFUNCTION(BlueprintCallable, Category = "ForTest")
+		static void CppSetFixedFoveatedRenderingLevel(EFixedFoveatedRenderingLevel level, bool isDynamic);
 };
